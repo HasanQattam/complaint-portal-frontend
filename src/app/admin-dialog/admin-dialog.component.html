@@ -1,0 +1,35 @@
+<div class="center">
+    <form class="example-form" [formGroup]="complaintForm" (ngSubmit)="complaintForm1()">
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Complaint ID</mat-label>
+            <input matInput formControlName="id" readonly>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Complaint Title</mat-label>
+            <input matInput formControlName="complaintTitle" readonly>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Complaint</mat-label>
+            <textarea matInput formControlName="complaint" readonly></textarea>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-select formControlName="status">
+                <mat-option style="color: coral;" value="PENDING">
+                    PENDING
+                </mat-option>
+                <mat-option style="color: green;" value="RESOLVED">
+                    RESOLVED
+                </mat-option>
+                <mat-option style="color: red;" value="DISMISSED">
+                    DISMISSED
+                </mat-option>
+              </mat-select>            
+        </mat-form-field>
+
+        <button mat-raised-button color="accent" type="submit" [mat-dialog-close]>Send</button>
+    </form>
+
+</div>
