@@ -1,7 +1,6 @@
-<div class="col-md-12">
-    <div class="card card-container">
-        <img id="profile-img" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" class="profile-img-card" />
-
+<div>
+    <div style="width: 50%; margin-left: 17em; margin-top: 10em;">
+        <img src="../../assets/login.jpg" style="margin-left: 13em; margin-bottom: 3em;"/>
         <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
             <div class="form-group">
                 <label for="username">Username</label>
@@ -43,7 +42,7 @@
             </div>
 
             <div class="form-group">
-                <button class="btn btn-primary btn-block">Sign Up</button>
+                <button class="btn btn-warning btn-block" style="color: white;font-weight: bold;">Sign Up</button>
             </div>
 
             <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">

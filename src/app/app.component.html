@@ -1,5 +1,5 @@
 <div id="app">
-  <nav class="navbar navbar-expand navbar-dark bg-dark">
+  <nav class="navbar navbar-expand navbar-dark text-white" style="background-color: purple">
     <a href="#" class="navbar-brand">Complaint Portal</a>
     <ul class="navbar-nav mr-auto" routerLinkActive="active">
       <li class="nav-item">
@@ -8,7 +8,7 @@
       <li class="nav-item" *ngIf="showAdminBoard">
         <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="!showAdminBoard">
         <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
       </li>
     </ul>
